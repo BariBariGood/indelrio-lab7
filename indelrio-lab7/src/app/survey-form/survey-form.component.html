@@ -1,7 +1,7 @@
 <form [formGroup]="surveyForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="name">Name:</label>
-      <input id="name" formControlName="name">
+      <input id="name" type="text" formControlName="name">
       <div *ngIf="name?.invalid && name?.touched">
         <small *ngIf="name?.errors?.['required']">Name is required.</small>
       </div>
@@ -9,7 +9,7 @@
   
     <div>
       <label for="email">Email:</label>
-      <input id="email" formControlName="email">
+      <input id="email" type="email" formControlName="email">
       <div *ngIf="email?.invalid && email?.touched">
         <small *ngIf="email?.errors?.['required']">Email is required.</small>
         <small *ngIf="email?.errors?.['email']">Invalid email format.</small>
